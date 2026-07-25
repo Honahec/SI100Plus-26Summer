@@ -8,20 +8,25 @@
     inputs@{ flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
+        "aarch64-darwin"
         "x86_64-linux"
       ];
       perSystem =
         { pkgs, ... }:
         let
           nodeEnv = with pkgs; [
+            git
             nodejs
             pnpm
           ];
         in
         {
           formatter = pkgs.nixpkgs-fmt;
-          devShells.default = pkgs.mkShell {
+          devShells.default = pkgs.mkShellNoCC {
             packages = nodeEnv;
+            shellHook = pkgs.lib.optionalString pkgs.stdenv.isDarwin ''
+              unset DEVELOPER_DIR SDKROOT
+            '';
           };
           packages.default = pkgs.stdenv.mkDerivation (finalAttrs: {
             name = "si100-static-page";
@@ -37,7 +42,7 @@
             pnpmDeps = pkgs.pnpm.fetchDeps {
               inherit (finalAttrs) pname version src;
               fetcherVersion = 1;
-              hash = "sha256-JyCOtJ8/yXYPQN9lSii9EvpIvgN26s4Ibs/u5AwKZkc=";
+              hash = "sha256-CO2L8w3649XTaEvPgcZeNlUTPz7+on/wbx21xYd3zH4=";
             };
 
             buildPhase =
