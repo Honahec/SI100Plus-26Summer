@@ -6,23 +6,23 @@ theme: simple
 highlightTheme: github
 css: assets/custom.css
 makeTitle:
-    lecture: SI100+ 2025 Lecture 4
-    title: 变量、运算符和表达式
-    detail: SI100+ 2025 Staff | 2025-08-09
+  lecture: SI100+ 2026 Lecture 4
+  title: 变量、运算符和表达式
+  detail: SI100+ 2026 Staff | 2026-08-09
 makeThanks: True
 revealOptions:
-    transition: 'slide'
-    transitionSpeed: fast
-    center: false
-    slideNumber: "c/t"
-    width: 1000
+  transition: "slide"
+  transitionSpeed: fast
+  center: false
+  slideNumber: "c/t"
+  width: 1000
 ---
 
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.0 在开始之前
-  
+# Part.0 在开始之前
+
   </div>
 </div>
 
@@ -51,7 +51,7 @@ VS Code 中，当前文件的编码显示在窗口下方状态栏右侧，如下
 
 - **Python 官方文档**：https://docs.python.org/zh-cn/3/
 - 菜鸟教程（非官方教程）：https://www.runoob.com/python3/python3-tutorial.html
-- **"RTFM"** ：Read The *Friendly* Manual
+- **"RTFM"** ：Read The _Friendly_ Manual
 
 Python 的官方简体中文文档一直在更新，相比于其他语言，非常的友好。
 
@@ -67,7 +67,7 @@ Python 的官方简体中文文档一直在更新，相比于其他语言，非�
   - 浮点数与其误差
 - 运算符，优先级，输入输出
   - 最小示例：A + B 问题
-  - 强制类型转换 
+  - 强制类型转换
 - 比较运算符和布尔运算
   - 逻辑表达式
 
@@ -76,7 +76,7 @@ Python 的官方简体中文文档一直在更新，相比于其他语言，非�
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.1 Python 基本语法
+# Part.1 Python 基本语法
 
   </div>
 </div>
@@ -122,11 +122,11 @@ Python 的官方简体中文文档一直在更新，相比于其他语言，非�
 Python 内置模块 `keyword` 记录有当前版本的所有关键字。
 
 ```python-repl
->>> import keyword 
->>> keyword.kwlist 
+>>> import keyword
+>>> keyword.kwlist
 ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await',
 ...
-``` 
+```
 
 **演示** ：Notebook 示例 2.1.3，2.1.4
 
@@ -208,7 +208,7 @@ print("这行代码可以被正常执行")
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.2 字面值与赋值语句
+# Part.2 字面值与赋值语句
 
   </div>
 </div>
@@ -239,7 +239,7 @@ print("这行代码可以被正常执行")
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.3 变量和基本数据类型
+# Part.3 变量和基本数据类型
 
   </div>
 </div>
@@ -303,7 +303,6 @@ Python 中的基本数据类型用于表示和操作不同种类的数据，主�
 
 字符串支持加法运算 `+`，效果是将前后字符串相连接。例如，`"SI" + "100P"` 的结果是 `"SI100P"`.
 
-
 <!--v-->
 
 ## 布尔 (Boolean)
@@ -321,7 +320,7 @@ Python 内置的 `type()` 能告诉我们变量属于哪个数据类型：
 ```python-repl
 >>> x = "text"
 >>> type(x) # 变量 x 是字符串类型
-<class 'str'> 
+<class 'str'>
 ```
 
 现在让我们实验一下变量赋值语句，并尝试借助变量进行简单数学计算（加 `+`、减 `-`、乘 `*`、除 `/` 等）, 如 `x = 8 / 4`.
@@ -338,6 +337,7 @@ Python 内置的 `type()` 能告诉我们变量属于哪个数据类型：
 >>> print(x + y)
 0.30000000000000004
 ```
+
 为什么不是 0.3？
 
 **演示** ：Notebook 示例 2.3.3
@@ -394,7 +394,7 @@ x = Decimal('0.1') # 使用 Decimal 类型存储 0.1
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.4 运算符，优先级，输入输出
+# Part.4 运算符，优先级，输入输出
 
   </div>
 </div>
@@ -427,17 +427,7 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 100px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
-  
-</div>
-
-<!--v-->
-
-## 运算符与优先级：分步示例
-
-<div style="width: 100%; margin-top: 10px; text-align: center;">
-
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** <mark>(1/2)</mark> </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
 
 </div>
 
@@ -447,9 +437,7 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
-
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** **(0.5)** </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* <mark>(1/2)</mark> </font>
 
 </div>
 
@@ -459,23 +447,9 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
 
-<font size="7"> 3 * 3 + 5 % 3 + <mark>16 ** (0.5)</mark> </font>
-
-</div>
-
-<!--v-->
-
-## 运算符与优先级：分步示例
-
-<div style="width: 100%; margin-top: 10px; text-align: center;">
-
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
-
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (0.5)</font>
-
-<font size="7"> 3 * 3 + 5 % 3 + **4** </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* **(0.5)** </font>
 
 </div>
 
@@ -485,11 +459,9 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (0.5)</font>
-
-<font size="7"> <mark>3 * 3</mark> + 5 % 3 + 4 </font>
+<font size="7"> 3 \* 3 + 5 % 3 + <mark>16 \*\* (0.5)</mark> </font>
 
 </div>
 
@@ -499,11 +471,39 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (0.5)</font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (0.5)</font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 4 </font>
+<font size="7"> 3 \* 3 + 5 % 3 + **4** </font>
+
+</div>
+
+<!--v-->
+
+## 运算符与优先级：分步示例
+
+<div style="width: 100%; margin-top: 10px; text-align: center;">
+
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
+
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (0.5)</font>
+
+<font size="7"> <mark>3 \* 3</mark> + 5 % 3 + 4 </font>
+
+</div>
+
+<!--v-->
+
+## 运算符与优先级：分步示例
+
+<div style="width: 100%; margin-top: 10px; text-align: center;">
+
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
+
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (0.5)</font>
+
+<font size="7"> 3 \* 3 + 5 % 3 + 4 </font>
 
 <font size="7"> **9** + 5 % 3 + 4 </font>
 
@@ -515,14 +515,14 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (0.5)</font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (0.5)</font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 4 </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 4 </font>
 
 <font size="7"> 9 + <mark>5 % 3</mark> + 4 </font>
-  
+
 </div>
 
 <!--v-->
@@ -531,11 +531,11 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (0.5)</font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (0.5)</font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 4 </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 4 </font>
 
 <font size="7"> 9 + 5 % 3 + 4 </font>
 
@@ -549,11 +549,11 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (0.5)</font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (0.5)</font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 4 </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 4 </font>
 
 <font size="7"> 9 + 5 % 3 + 4 </font>
 
@@ -567,11 +567,11 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
 
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (1/2) </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (1/2) </font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 16 ** (0.5)</font>
+<font size="7"> 3 \* 3 + 5 % 3 + 16 \*\* (0.5)</font>
 
-<font size="7"> 3 * 3 + 5 % 3 + 4 </font>
+<font size="7"> 3 \* 3 + 5 % 3 + 4 </font>
 
 <font size="7"> 9 + 5 % 3 + 4 </font>
 
@@ -615,7 +615,7 @@ Python 中的 **基本运算符 (operator)** 有：`+`, `-`, `*`, `/`, `//`, `%`
   - 结尾默认附加一个换行
   - `print(x, end="abc")` 可以把结尾的换行符替换为 `abc`。
   - 使用 `print(x, y, ...)` 将在一行内依序输出 `x`, `y`, ...（以空格间隔）
-  
+
 **演示** ：Notebook 示例 2.4.3
 
 <!--v-->
@@ -635,6 +635,7 @@ f.write("Hello, World!") # 从文件开头覆盖写入字符串
 f.write("This is a text.") # 从上一操作处继续写入
 f.close() # 操作完毕，关闭文件
 ```
+
 **`open()` 操作默认不支持中文。** 如要操作中文，多数情况下需要用 `codec` 模块在指定编码下读取。
 
 由于时间关系，详细的文件操作不在此展开讲述，可自行阅读文档或查阅资料。
@@ -650,7 +651,7 @@ f.close() # 操作完毕，关闭文件
 例：
 
 ```python-repl
->>> 输入整数 a: 
+>>> 输入整数 a:
 <<< 3
 >>> 输入整数 b:
 <<< 2
@@ -667,7 +668,7 @@ f.close() # 操作完毕，关闭文件
 
 > `input()` **将一切输入作为字符串 (`str`) 处理**。
 >
->字符串支持加法运算 `+`，效果是将前后字符串相连接。
+> 字符串支持加法运算 `+`，效果是将前后字符串相连接。
 
 **"12" + "34" → "1234"**
 
@@ -698,6 +699,7 @@ f.close() # 操作完毕，关闭文件
 ## 强制类型转换
 
 一些典型的用途包括：
+
 - 将**数字与其字符串形式互转**，如 `"4.2"`（字符串）和 `4.2`（数字）。
 - 将浮点数小数位移除**1变为整数**，例如 `int(5.9)` 的结果是 `5`。
 
@@ -712,7 +714,7 @@ f.close() # 操作完毕，关闭文件
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.5 比较运算符和布尔运算
+# Part.5 比较运算符和布尔运算
 
   </div>
 </div>
@@ -756,11 +758,11 @@ f.close() # 操作完毕，关闭文件
   一元运算符，将其右侧布尔值取反（`True` 变为 `False`， 反之亦然）
 
 | 变量 `A` | 变量 `B` | `A and B` 的结果 | `A or B` 的结果 | `not A` 的结果 |
-| ---------- | ---------- | ------------------ | ----------------- | ----------------- |
-| `True`   | `True`   | `True`           | `True`          | `False`         |
-| `True`   | `False`  | `False`          | `True`          | (同上)            |
-| `False`  | `True`   | `False`          | `True`          | `True`          |
-| `False`  | `False`  | `False`          | `False`         | (同上)            |
+| -------- | -------- | ---------------- | --------------- | -------------- |
+| `True`   | `True`   | `True`           | `True`          | `False`        |
+| `True`   | `False`  | `False`          | `True`          | (同上)         |
+| `False`  | `True`   | `False`          | `True`          | `True`         |
+| `False`  | `False`  | `False`          | `False`         | (同上)         |
 
 **演示** ：Notebook 示例 2.5.2
 
@@ -769,7 +771,7 @@ f.close() # 操作完毕，关闭文件
 ## 布尔运算符的短路求值
 
 - 在 `A and B and C and D and ...` 这样的表达式中，如果 `A` 为 `False`，则无论 `B`, `C`, `D` ... 的值如何，整个表达式必然为 `False`，因此后续的表达式就没有必要计算下去了。
-- 类似的，在 `A or B or C or D or ...` 中，如果 `A` 为 `True`，则整个表达式必然为 `True` 。 
+- 类似的，在 `A or B or C or D or ...` 中，如果 `A` 为 `True`，则整个表达式必然为 `True` 。
 
 Python 的布尔运算符就能够这样“偷懒”。
 
@@ -794,7 +796,7 @@ Python 的布尔运算符就能够这样“偷懒”。
 <div style="width: 100%; margin-top: 10px; text-align: center;">
 
 <font size="6"> 类型转换 > `**` > 正负号 (`+x`, `-x`) > [`*`, `/`, `//`, `%`] > [`+`, `-`] > 比较运算符 (`==`, `!=`, `<`, `<=`, `>`, `>=`) > 布尔运算符 (`and`, `or`, `not`, ...) > ... </font>
-  
+
 </div>
 
 <!--s-->
@@ -805,8 +807,8 @@ Python 的布尔运算符就能够这样“偷懒”。
 - VS Code 基础操作
 - Python 官方文档是最权威的 Python 参考资料
   - 建立起“遇事不决先上网查文档/资料”的习惯
-  - **RTFM** = Read The *Friendly* Manual
-  - **STFW** = Search The *Friendly* Web
+  - **RTFM** = Read The _Friendly_ Manual
+  - **STFW** = Search The _Friendly_ Web
 - 标识符起名规则、缩进和注释
   - 善加利用注释，为他人更为自己
 

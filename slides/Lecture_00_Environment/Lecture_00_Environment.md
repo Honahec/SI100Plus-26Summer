@@ -7,9 +7,9 @@ highlightTheme: github
 css: assets/custom.css
 autoTitlePage: true
 makeTitle:
-    lecture: SI100+ 2025 Lecture 0
-    title: 环境配置
-    detail: SI100+ 2025 Staff | 2025-08-04
+  lecture: SI100+ 2026 Lecture 0
+  title: 环境配置
+  detail: SI100+ 2026 Staff | 2026-08-04
 makeThanks: true
 ---
 

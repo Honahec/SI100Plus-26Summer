@@ -6,16 +6,16 @@ theme: simple
 highlightTheme: github
 css: assets/custom.css
 makeTitle:
-    lecture: SI100+ 2025 Lecture 7
-    title: Python 面向对象
-    detail: SI100+ 2025 Staff | 2025-08-16
+  lecture: SI100+ 2026 Lecture 7
+  title: Python 面向对象
+  detail: SI100+ 2026 Staff | 2026-08-16
 makeThanks: True
 revealOptions:
-    transition: 'slide'
-    transitionSpeed: fast
-    center: false
-    slideNumber: "c/t"
-    width: 1000
+  transition: "slide"
+  transitionSpeed: fast
+  center: false
+  slideNumber: "c/t"
+  width: 1000
 ---
 
 ## 目录
@@ -53,8 +53,8 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.1 数据抽象
-  
+# Part.1 数据抽象
+
   </div>
 </div>
 
@@ -77,7 +77,7 @@ revealOptions:
 <div class="fragment">
 
 ```python
-year = 2025
+year = 2026
 month = 8
 day = 16
 
@@ -99,7 +99,7 @@ def set_time(new_year, new_month, new_day):
 假如现在你要把日历改写成时钟？
 
 ```python
-year = 2025
+year = 2026
 month = 8
 day = 16
 hour = 19
@@ -129,14 +129,14 @@ def set_time(new_year, new_month, new_day, new_hour, ...):
 - 看来要声明很多变量了
 
 ```python
-clock_1_year = 2025
+clock_1_year = 2026
 clock_1_month = 8
 clock_1_day = 16
 clock_1_hour = 19
 clock_1_minute = 20
 clock_1_second = 0
 
-clock_2_year = 2025
+clock_2_year = 2026
 clock_2_month = 8
 ...
 ```
@@ -157,8 +157,8 @@ clock_2_month = 8
 前面已经学过的**列表、元组**。
 
 ```python
-clock_1 = [2025, 8, 16, 19, 20, 0]
-clock_2 = [2025, 8, 16, 20, 00, 0]
+clock_1 = [2026, 8, 16, 19, 20, 0]
+clock_2 = [2026, 8, 16, 20, 00, 0]
 
 my_clocks = [clock_1, clock_2]
 
@@ -194,8 +194,8 @@ Python 中有**类**的概念，可以将相关的数据和操作封装在一起
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.2 类
-  
+# Part.2 类
+
   </div>
 </div>
 
@@ -231,7 +231,7 @@ class Clock:
 
 ```python
 class Clock:
-    year = 2025
+    year = 2026
     month = 8
     day = 16
 ```
@@ -278,7 +278,7 @@ class Clock:
 在编写了 `__init__` 方法后，我们就可以用类来创建实例了。
 
 ```python
-clock1 = Clock(2025, 8, 16)
+clock1 = Clock(2026, 8, 16)
 ```
 
 像函数调用那样，但是这里函数名被换成了类名。
@@ -351,14 +351,14 @@ class Clock:
         self.month = month
         self.day = day
 
-clock1 = Clock(2025, 8, 16)
+clock1 = Clock(2026, 8, 16)
 ```
 
 - `__init__`：创建一个实例时被调用的特殊方法
 - `self`：表示当前实例
 - `self.year`、`self.month`、`self.day`：实例的属性
 - `self.year = year`：为当前实例添加属性 `year`，并将其值设置为传入的 `year` 参数
-- `clock1 = Clock(2025, 8, 16)`：创建一个 `Clock` 类的实例，传入的 `year`、`month` 和 `day` 分别为 2025、8 和 16
+- `clock1 = Clock(2026, 8, 16)`：创建一个 `Clock` 类的实例，传入的 `year`、`month` 和 `day` 分别为 2026、8 和 16
 
 <!--v-->
 
@@ -388,8 +388,8 @@ class Clock:
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.3 所谓的面向对象编程
-  
+# Part.3 所谓的面向对象编程
+
   </div>
 </div>
 
@@ -401,7 +401,7 @@ class Clock:
 
 - 假如我没有写任何合理的方法，用 `Clock` 库的人（或者一天后的你）就会因为忘了每一个成员叫什么而不得不再读一遍代码。
   - 因此我们要提供 `Clock.set_time` 和 `Clock.display_time` 方法来简化操作。
-- 假如有人在 `set_time` 里提供的时间不合规（如 2025 年 -12 月 -31 日），我们可以用控制流禁止这种操作，但是如果那个人直接使用 `clock1.month = -12` 呢？
+- 假如有人在 `set_time` 里提供的时间不合规（如 2026 年 -12 月 -31 日），我们可以用控制流禁止这种操作，但是如果那个人直接使用 `clock1.month = -12` 呢？
   - 因此我们需要让一些成员不能被随意访问。
 
 </br>

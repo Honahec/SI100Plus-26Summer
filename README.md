@@ -1,10 +1,9 @@
-# SI 100+ Summer 2025
+# SI 100+ Summer 2026
 
 ## 本地预览
 
 ```bash
-git clone https://github.com/AstatineAi/SI100Plus-25Su
-cd SI100Plus-25Su
+git clone https://github.com/Honahec/SI100Plus-26Summer.git
+cd SI100Plus-26Summer
 nix build
 ```
-

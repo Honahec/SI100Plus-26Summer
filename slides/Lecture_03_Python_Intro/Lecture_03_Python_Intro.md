@@ -6,23 +6,23 @@ theme: simple
 highlightTheme: github
 css: assets/custom.css
 makeTitle:
-    lecture: SI100+ 2025 Lecture 3
-    title: 编程语言和 Python 简介
-    detail: SI100+ 2025 Staff | 2025-08-09
+  lecture: SI100+ 2026 Lecture 3
+  title: 编程语言和 Python 简介
+  detail: SI100+ 2026 Staff | 2026-08-09
 makeThanks: True
 revealOptions:
-    transition: 'slide'
-    transitionSpeed: fast
-    center: false
-    slideNumber: "c/t"
-    width: 1000
+  transition: "slide"
+  transitionSpeed: fast
+  center: false
+  slideNumber: "c/t"
+  width: 1000
 ---
 
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.1 课程介绍
-  
+# Part.1 课程介绍
+
   </div>
 </div>
 
@@ -84,9 +84,9 @@ x = x + y # 这是不是说明 y = 0?
 </div>
 <div style="text-align: center;">
 
-  编程语言的函数，可以隐藏无用的细节
-</div>
+编程语言的函数，可以隐藏无用的细节
 
+</div>
 
 <!--v-->
 
@@ -103,22 +103,23 @@ x = x + y # 这是不是说明 y = 0?
   <span style="display: inline-block; width: 28%; text-align: center;">$\Rightarrow$</span>
   <div style="display: flex; align-items: center; justify-content: center; width: 40%; margin-left: -100px;">
 
-  ```python
-  import random
-  
-  x = random.randint(1, 100)
-  guess = int(input())
-  while guess != x:
-      print("Try again!")
-      guess = int(input())
-  print("Congratulations!")
-  ```
+```python
+import random
+
+x = random.randint(1, 100)
+guess = int(input())
+while guess != x:
+    print("Try again!")
+    guess = int(input())
+print("Congratulations!")
+```
 
   </div>
 </div>
 <div style="text-align: center;">
 
-  用更“正式”的方式描述你的逻辑
+用更“正式”的方式描述你的逻辑
+
 </div>
 
 <!--v-->
@@ -140,8 +141,8 @@ x = x + y # 这是不是说明 y = 0?
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.2 什么是编程语言？
-  
+# Part.2 什么是编程语言？
+
   </div>
 </div>
 
@@ -182,8 +183,8 @@ x = x + y # 这是不是说明 y = 0?
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.3 Python
-  
+# Part.3 Python
+
   </div>
 </div>
 
@@ -201,11 +202,11 @@ Python 是一种通用的高级编程语言。
 - 社区富有活力，语言本身 & 第三方库都在不断更新
 - 调用多种库，实现图像处理（OpenCV），数据分析（Pandas），机器学习（PyTorch），网页开发（Django），etc.
 
-
 **听起来好厉害，有什么我们身边的例子吗？**
-  - sympy，符号计算库，帮你应对大一高数/数分
-  - requests，获取网页信息，制作一个自动把课程表导入日历的小工具
-  - beautifulsoup，从网页中快捷地提取信息 ~~说不定你可以做一个抢课的脚本~~
+
+- sympy，符号计算库，帮你应对大一高数/数分
+- requests，获取网页信息，制作一个自动把课程表导入日历的小工具
+- beautifulsoup，从网页中快捷地提取信息 ~~说不定你可以做一个抢课的脚本~~
 
 <!--v-->
 
@@ -283,6 +284,7 @@ a = 1
 b = 2
 print(a + b)
 ```
+
 <div style="text-align: center;">
 
 **Magic!**
@@ -314,7 +316,7 @@ print("This is the magic of Python!")
 x = 123
 y = 456
 print(x + y)
-print("Hello, SI100+ 2025!")
+print("Hello, SI100+ 2026!")
 ```
 
 运行上面的代码，观察输出。（参见下发的 ipynb 文件）
@@ -328,8 +330,8 @@ Python 的执行顺序是**从上到下，逐行执行代码**。
 **`print` 语句**
 
 ```py
-print("Hello, SI100+ 2025!")
-``` 
+print("Hello, SI100+ 2026!")
+```
 
 总结“规律”，`print` 语句会把括号里的内容**打印到屏幕上**。（内容换成别的呢？）
 
@@ -370,7 +372,6 @@ y = 456
 
 （非课程内容）更具体的规则参见：[Python 官方文档-赋值语句](https://docs.python.org/zh-cn/3/reference/simple_stmts.html#assignment-statements)
 
-
 <!--v-->
 
 ## Python 基础语义
@@ -392,7 +393,6 @@ $$
 ```py
 y = 114 + 5 ** 14
 ```
-
 
 <!--v-->
 

@@ -6,20 +6,20 @@ theme: simple
 highlightTheme: github
 css: assets/custom.css
 makeTitle:
-    lecture: SI100+ 2025 Lecture 5
-    title: 函数
-    detail: SI100+ 2025 Staff | 2025-08-11
+  lecture: SI100+ 2026 Lecture 5
+  title: 函数
+  detail: SI100+ 2026 Staff | 2026-08-11
 makeThanks: True
 revealOptions:
-    transition: 'slide'
-    transitionSpeed: fast
-    center: false
-    slideNumber: "c/t"
-    width: 1000
+  transition: "slide"
+  transitionSpeed: fast
+  center: false
+  slideNumber: "c/t"
+  width: 1000
 ---
 
 ## 写在前面
- 
+
 - 本次课程文字量较多，内容较大，可以配合录播和 Notebook 反复观看
 - 提前发放了课程资料，鼓励大家提前预习
 - 本次课程中都会给 `1 min` 来读 Notebook 中的代码
@@ -43,8 +43,8 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.1 Python 中的函数
-  
+# Part.1 Python 中的函数
+
   </div>
 </div>
 
@@ -71,12 +71,12 @@ revealOptions:
 ## 函数 (function)
 
 - 为什么要有函数？
-	- 数学的函数，一个名字就省去了抄写复杂的定义： $\sin(x), \cos(x), \tan(x)$
-	- 编程中，定义一个函数可以**防止重复的代码**（代码复用）
-	- 让我们专注在更重要的内容上，**隐藏过于复杂的细节**（代码封装）
+  - 数学的函数，一个名字就省去了抄写复杂的定义： $\sin(x), \cos(x), \tan(x)$
+  - 编程中，定义一个函数可以**防止重复的代码**（代码复用）
+  - 让我们专注在更重要的内容上，**隐藏过于复杂的细节**（代码封装）
 - 函数是什么？
-	- 一段**有名字的代码**，可以通过那个名字（标识符）找到并开始运行它
-	- 通俗理解，函数就是大段代码的 **“替身”**
+  - 一段**有名字的代码**，可以通过那个名字（标识符）找到并开始运行它
+  - 通俗理解，函数就是大段代码的 **“替身”**
 
 <!--v-->
 
@@ -92,7 +92,7 @@ revealOptions:
 缺东西，函数不做事：
 
       print  "Hello"
-        ^       ^ 
+        ^       ^
         |       |
       函数名     参数
 
@@ -196,13 +196,13 @@ https://docs.python.org/zh-cn/3/library/functions.html
 - 圆能够“求半径”
 - 三角形和正方形，不能够“求半径”
 
-</br> 
+</br>
 
 **演示**：Notebook 示例 3.1.10
 
 - 像是某种特殊的函数：`圆.求半径()` $\to$ `"abc".capitalize()`
 - 方法区别于函数，它不是 **随处可用** 的，而是 **依赖** 某个特定的字面值/变量
-	- 例如，上述例子中，只有 `str` 类型的字面值/变量才能够使用 `.capitalize()`
+  - 例如，上述例子中，只有 `str` 类型的字面值/变量才能够使用 `.capitalize()`
 - 我们并不会在这次课程中涉及到怎么写 **方法**，因为还需要很多面向对象的前置知识
 
 <!--s-->
@@ -210,8 +210,8 @@ https://docs.python.org/zh-cn/3/library/functions.html
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.2 定义你的函数
-  
+# Part.2 定义你的函数
+
   </div>
 </div>
 
@@ -219,7 +219,7 @@ https://docs.python.org/zh-cn/3/library/functions.html
 
 ## 代码块（Revisited）
 
->   Python 的特色之一是依据代码行的 **缩进 (indentation)** 确定代码块：
+> Python 的特色之一是依据代码行的 **缩进 (indentation)** 确定代码块：
 
 ```py []
 if 1 + 1 == 2:
@@ -310,10 +310,10 @@ def celsius_to_fahrenheit(celsius):
 - 要定义一个函数，我们会用关键字 `def` 开头，后接函数名称和一对圆括号
 - 圆括号里面是**参数** (Parameter)，可以有多个，用逗号分隔
 - 圆括号里写下的变量可以直接在函数里面使用，实际的值将由调用时 **真正的参数** 决定
-	- 例如 `f(2)` 会自动将 `x` 赋值为 `2`，这样才计算得出了正确的结果
+  - 例如 `f(2)` 会自动将 `x` 赋值为 `2`，这样才计算得出了正确的结果
 - **一定不要忘记那个冒号！**
-	- 冒号相当于告诉 Python 后面的代码块是函数的内容
-	- 代码块取决于**缩进**，冒号后面跟的是很多行开头是 4 个空格的代码，同属于一个代码块
+  - 冒号相当于告诉 Python 后面的代码块是函数的内容
+  - 代码块取决于**缩进**，冒号后面跟的是很多行开头是 4 个空格的代码，同属于一个代码块
 
 <!--v-->
 
@@ -355,7 +355,7 @@ say_my_name("初音未来")
 def say_my_name(name):
 	print("我去,", name, "!")
 ```
-  
+
 ```python-traceback
 NameError
 Cell In[3], line 3
@@ -372,7 +372,7 @@ NameError: name 'say_my_name' is not defined
 ## 函数声明与执行的顺序
 
 - 函数必须先声明才能调用
-	- 什么是声明？就是从 `def` 一直到代码块结束！
+  - 什么是声明？就是从 `def` 一直到代码块结束！
 - Python 顺序执行
 - 执行到 `def` 那一行才相当于有了这个函数
 
@@ -403,8 +403,8 @@ print("你好！")
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.3 函数里里外外
-  
+# Part.3 函数里里外外
+
   </div>
 </div>
 
@@ -474,7 +474,7 @@ fahrenheit = celsius_to_fahrenheit(celsius)
 ```py []
 which_li_hua = "高考英语卷中"
 
-def ShanghaiTech(): 
+def ShanghaiTech():
     which_li_hua = "上海科技大学"
     print("上科大的", which_li_hua)
 
@@ -488,7 +488,7 @@ ShanghaiTech()
 SUSTech()
 
 # ShanghaiTech 的李华不会影响外面的人心中的李华
-print("外面的人", which_li_hua) 
+print("外面的人", which_li_hua)
 ```
 
 <!--s-->
@@ -496,8 +496,8 @@ print("外面的人", which_li_hua)
 <div class="middle center">
   <div style="width: 100%">
 
-  # 另：如何查询函数用法
-  
+# 另：如何查询函数用法
+
   </div>
 </div>
 
@@ -514,7 +514,7 @@ print("外面的人", which_li_hua)
 我们已经知道的：
 
 - Python 官方文档：https://docs.python.org/zh-cn/3/
-- STFW: Search the *Friendly* Web
+- STFW: Search the _Friendly_ Web
 - 问 GPT?
 
 </br>
@@ -565,8 +565,8 @@ print(*args, sep=' ', end='\n', file=None, flush=False)
 - Python 的控制台中的 `help` 使借用 `less` 命令输出的，在 `linux` 下，它是用来“展示”输出的（否则内容过多就会溢出屏幕而丢失）
 - 在很久以前，计算机里只有 `vi` 编辑器，它规定的 `:q` 退出， `J/K` 用来上下翻页，`Ctrl+U/D` 快速上下翻页。而这成为了当时的习惯，被沿用下来。
 - 当时 `less` 的作者 Mark Nudelman 只是想“方便的翻阅长长的报错”
-	- 他当时用的 `vi` 版本不能打开这么大的日志文件
-	- 另一个叫 `more` 的工具虽然能打开，但是不能向回翻<small>（现在似乎有了）</small>
+  - 他当时用的 `vi` 版本不能打开这么大的日志文件
+  - 另一个叫 `more` 的工具虽然能打开，但是不能向回翻<small>（现在似乎有了）</small>
 - `less` = `vi` 的操作模式 + `more` 的文件支持 的“查看器” （文件分页器）
 
 <div style="column-count: 2; padding-left: 20vh; padding-right: 20vh">

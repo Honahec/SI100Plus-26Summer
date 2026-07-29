@@ -6,27 +6,25 @@ theme: simple
 highlightTheme: github
 css: assets/custom.css
 makeTitle:
-    lecture: SI100+ 2025 Lecture 6
-    title: 控制流和更多类型
-    detail: SI100+ 2025 Staff | 2025-08-15
+  lecture: SI100+ 2026 Lecture 6
+  title: 控制流和更多类型
+  detail: SI100+ 2026 Staff | 2026-08-15
 makeThanks: True
 revealOptions:
-    transition: 'slide'
-    transitionSpeed: fast
-    center: false
-    slideNumber: "c/t"
-    width: 1000
+  transition: "slide"
+  transitionSpeed: fast
+  center: false
+  slideNumber: "c/t"
+  width: 1000
 ---
 
 <div class="middle center">
   <div style="width: 100%">
 
 # 00. 控制流
-  
+
   </div>
 </div>
-
-
 
 <!--v-->
 
@@ -48,26 +46,25 @@ revealOptions:
   <div style="width: 100%">
 
 # 01. 条件结构
-  
+
   </div>
 </div>
-
 
 <!--v-->
 
 ## 条件语句
 
 - 假设你遇到了这样一个场景
-    - 中午吃饭的时候，你会检查卡有没有钱
-        - 如果有钱，你就自己去吃饭
-        - 如果没钱了，你就会~~和朋友一起去吃饭~~
+  - 中午吃饭的时候，你会检查卡有没有钱
+    - 如果有钱，你就自己去吃饭
+    - 如果没钱了，你就会~~和朋友一起去吃饭~~
 
-我们简化一下： 
+我们简化一下：
 
 ```txt
 如果 卡里有钱 那么 自己去吃饭
 否则 和朋友一起去吃饭
-``` 
+```
 
 <!--v-->
 
@@ -98,7 +95,7 @@ else:
 - `if` 语句的基本语法如下：
 
 ```python
-if condition: 
+if condition:
     statements
     statements
     ...
@@ -268,7 +265,6 @@ else:
         print('Ginormous')
 ```
 
-
 <img src="./images/image-4.png" width="100%" style="display: block; margin: 0 auto;"/>
 
 </div>
@@ -291,7 +287,8 @@ else:
         print('Huge')
     else:
         print('Ginormous')
-``` 
+```
+
 <!-- .element: style="margin: 1vh" -->
 
 ```py [0|3]
@@ -306,6 +303,7 @@ elif x < 100:
 else:
     print('Ginormous')
 ```
+
 <!-- .element: style="margin: 1vh" -->
 
 </div>
@@ -339,7 +337,7 @@ print(f(x))
 def fly():
     ticket = int(input("是否购买机票（0-未购买 1-购买）"))
     safety = int(input("是否通过安检（0-未通过 1-通过）"))
-    
+
     if ticket == 1 and safety == 1:
         print("请登机")
     elif ticket == 1 and safety != 1:
@@ -353,7 +351,7 @@ def fly():
   <div style="width: 100%">
 
 # 02. 更多类型！列表、元组与字典
-  
+
   </div>
 </div>
 
@@ -376,59 +374,57 @@ def fly():
 ## 列表 (`list`)
 
 - 创建列表
-    - `empty_list = []`
-    - `fruits = ['apple', 'banana', 'cherry']`
-    - 元素用 `,` 分隔
+  - `empty_list = []`
+  - `fruits = ['apple', 'banana', 'cherry']`
+  - 元素用 `,` 分隔
 
 - 访问列表中的元素
-    - 列表中可能有多个元素，我们用 **下标/索引** (index) 来访问
-    - `fruits[1] = ?`: 索引从 `0` 开始
+  - 列表中可能有多个元素，我们用 **下标/索引** (index) 来访问
+  - `fruits[1] = ?`: 索引从 `0` 开始
 
 - 修改特定元素
-    - `fruits[1] = 'blueberry'`
+  - `fruits[1] = 'blueberry'`
 
 - 追加元素
-    - 在末尾添加：`fruits.append('date')`
+  - 在末尾添加：`fruits.append('date')`
 
 <!--v-->
+
 ## 列表 (`list`) (cont'd)
 
 - 删除元素
-    - 删除指定元素 `fruits.remove('banana')`
-    - 删除指定索引的元素 `del fruits[1]`
-    - 移除（并返回）最后一个元素 `last_fruit = fruits.pop()`
+  - 删除指定元素 `fruits.remove('banana')`
+  - 删除指定索引的元素 `del fruits[1]`
+  - 移除（并返回）最后一个元素 `last_fruit = fruits.pop()`
 
 - 切片 (slide)
-    - `fruits[from:to:step]`
+  - `fruits[from:to:step]`
 
 - 长度
-    - 获取列表中元素个数 `length = len(fruits)`
+  - 获取列表中元素个数 `length = len(fruits)`
 
 * operator运算符
-
-  * '+' 可以连接两个 list `fruits + ['apple', 'banana']`
-
+  - '+' 可以连接两个 list `fruits + ['apple', 'banana']`
 
 <!--v-->
-
 
 ## List
 
 ### Nested list 嵌套列表
 
-* 我们可以在 `list` 中嵌套其他 `list`
+- 我们可以在 `list` 中嵌套其他 `list`
 
-* `matrix = [[1, 2, 3], [4, 5, 6]]` (二维列表)
+- `matrix = [[1, 2, 3], [4, 5, 6]]` (二维列表)
 
 <!--v-->
 
 ## 元组 (`Tuple`)
 
-* Python 的元组与列表类似，**不同之处在于元组的元素不能修改**。
+- Python 的元组与列表类似，**不同之处在于元组的元素不能修改**。
 
-* 元组使用小括号，列表使用方括号。
+- 元组使用小括号，列表使用方括号。
 
-* 元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。
+- 元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。
 
 ```python []
 tup1 = ('physics', 'chemistry', 1997, 2000)
@@ -436,17 +432,17 @@ tup2 = (1, 2, 3, 4, 5 )
 tup3 = (50,) # 元组中只包含一个元素时，需要在元素后面添加逗号
 ```
 
-* 访问方法和list相同，只是元组中的元素值是不允许修改的。
+- 访问方法和list相同，只是元组中的元素值是不允许修改的。
 
 <!--v-->
 
 ## 集合 (`Set`)
 
-* 集合是一个无序的不重复元素序列。
+- 集合是一个无序的不重复元素序列。
 
-* 集合中的元素不会重复，并且可以进行交集、并集、差集等常见的集合操作
+- 集合中的元素不会重复，并且可以进行交集、并集、差集等常见的集合操作
 
-* 可以使用大括号 `{...}` 创建集合（但是空集合只能用 `set()`），元素之间用逗号 , 分隔， 或者也可以使用 `set()` 函数创建集合
+- 可以使用大括号 `{...}` 创建集合（但是空集合只能用 `set()`），元素之间用逗号 , 分隔， 或者也可以使用 `set()` 函数创建集合
 
 ```python []
 set1 = {1, 2, 3, 4}            # 直接使用大括号创建集合
@@ -473,7 +469,7 @@ set2 = set([4, 5, 6, 7])      # 使用 set() 函数从列表创建集合
   <div style="width: 100%">
 
 # 03.循环语句
-    
+
   </div>
 </div>
 
@@ -486,7 +482,7 @@ set2 = set([4, 5, 6, 7])      # 使用 set() 函数从列表创建集合
 
 <!--v-->
 
-## `while` - 很内向，吃饱了也不说话 
+## `while` - 很内向，吃饱了也不说话
 
 ```py []
 hungry = 10 # 如饱
@@ -557,6 +553,7 @@ while i < 5:
 print("end.")
 # Output: 1 1 2 2 3 end.
 ```
+
 <!-- .element: style="margin:1vh"-->
 
 ```py [0|5|6|2|0]
@@ -570,6 +567,7 @@ while i < 5:
 print("end.")
 # Output: 1 1 2 2 3 4 4 5 5 end.
 ```
+
 <!-- .element: style="margin:1vh"-->
 
 </div>
@@ -588,6 +586,7 @@ print("end.")
 2/2=1   ......0
 1/2=0   ......1
 ```
+
 <!--v-->
 
 ## Example: 进制转换 (HARD)
@@ -596,16 +595,16 @@ print("end.")
 - 短除法！**每次** 除以 `2`， **直到** 商为 `0`，把结果从下往上读
 
 ```py []
-def decimal_to_binary(n):  
-    binary_num = ''  
-    while n > 0:  
-        remainder = n % 2  
+def decimal_to_binary(n):
+    binary_num = ''
+    while n > 0:
+        remainder = n % 2
         binary_num = str(remainder) + binary_num # 不能写成 +=, 顺序不对
         n //= 2 # n = n // 2
-    return binary_num  
+    return binary_num
 
 decimal_number = 10
-binary_number = decimal_to_binary(decimal_number)  
+binary_number = decimal_to_binary(decimal_number)
 print(decimal_number, "的二进制是", binary_number)
 ```
 
@@ -650,7 +649,7 @@ for fruit in ["apple", "banana", "cherry"]:
 ```
 
 ```txt
-apple, banana, cherry, 
+apple, banana, cherry,
 ```
 
 <!--v-->
@@ -682,17 +681,17 @@ print("end.")
 - 列表可以靠 `list1[i]` 获取单个元素，通过 `list1[start:end:step]` 切片
 - 字符串可以靠 `str1[i]` 获取单个字符，通过 `str1[start:end:step]` 切片
 
-- - -
+---
 
 - 列表的下标从 `0` 开始
 - 字符串的下标从 `0` 开始
 
-- - -
+---
 
 - 列表可以靠 `list1.append(item)` 添加
 - 字符串可以靠 `str1 = str1 + "..."` 添加
 
-- - -
+---
 
 - 两个列表可以通过 `+` 有序连接
 - 两个字符串可以通过 `+` 有序连接
@@ -787,7 +786,7 @@ print("num =", num) # 循环用的变量会被遗留下来，即使 num 也是�
 
 ```txt
 num = 2
-1 5 10 
+1 5 10
 num = 10
 ```
 
@@ -818,26 +817,26 @@ print(is_prime(input_num))
 ## Takeaway Message
 
 - 控制流是什么？
-    - 条件结构
-        - `if` ——如果
-        - `if-else` ——如果，否则
-        - `if-elif-else` —— `elif = else + if`
-        - Nested-`if` 及正确化简
-    - 循环结构
-        - `while` ——满足条件一直做！
-        - `for` ——遍历！逐个访问！
-        - `break`, `continue` ——停下还是跳过
-        - `range`：`for`的好帮手
-        - 循环的嵌套
+  - 条件结构
+    - `if` ——如果
+    - `if-else` ——如果，否则
+    - `if-elif-else` —— `elif = else + if`
+    - Nested-`if` 及正确化简
+  - 循环结构
+    - `while` ——满足条件一直做！
+    - `for` ——遍历！逐个访问！
+    - `break`, `continue` ——停下还是跳过
+    - `range`：`for`的好帮手
+    - 循环的嵌套
 
 <!--s-->
 
 ## Takeaway Message (cont'd)
 
 - 新学到的类型
-    - `list` ——无序、什么都装的下的列表
-    - `tuple` ——无法改变的“列表”
-    - `set` ——集合，永远没有重复！
+  - `list` ——无序、什么都装的下的列表
+  - `tuple` ——无法改变的“列表”
+  - `set` ——集合，永远没有重复！
 
 <!--s-->
 
@@ -853,14 +852,14 @@ print(is_prime(input_num))
 
 ## 字典 (Dict)
 
-* 字典的每个键值 **`key:value`** 用冒号 `:` 分割，每个键值对之间用逗号 `,` 分割，整个字典包括在花括号 `{}` 中 ,格式如下所示：
-* 就像我们查《新华字典》，字就是 `key`，字的释义就是 `value`
+- 字典的每个键值 **`key:value`** 用冒号 `:` 分割，每个键值对之间用逗号 `,` 分割，整个字典包括在花括号 `{}` 中 ,格式如下所示：
+- 就像我们查《新华字典》，字就是 `key`，字的释义就是 `value`
 
 ```python
 d = { key1 : value1, key2 : value2 }
 ```
 
-* 键一般是唯一的、不可变的，如果重复最后的一个键值对会替换前面的，值不需要唯一。
+- 键一般是唯一的、不可变的，如果重复最后的一个键值对会替换前面的，值不需要唯一。
 
 ```python
 my_info = { # 这里用了一个比较美观的换行写法，适用于长文本排版
@@ -884,27 +883,27 @@ my_info = { # 这里用了一个比较美观的换行写法，适用于长文本
 - 注意到资料的**猜数字**代码左侧有一个小红点了吗？这个点的名字叫断点 (breakpoint)
 - 鼠标悬浮在当前行的最左侧，就可以启用/禁用该断点
 - 使用**调试**模式启动时（运行按钮 ▶️ 的下拉菜单里，有一个 `调试该代码块`）
-    - 代码会自动在此处停止
-    - 上面会多出一个执行的小方框
-        - 我们暂时只需要无脑点 步入 (Step into) 就可以一步一步执行了
-        - 上面小方框里的 ▶️ 代表继续，继续执行到下一次遇见断点或结束
-    - 左侧会切换到 运行与调试 的菜单
-        - 最上面写了一些探测到的变量，你可以实时观察他们
-        - 中间是 监视，点击 + 可以输入一个 **表达式** 进行观测，就像实时 `print` 一样，非常方便
-        - **小任务: 尝试观察 guess, 和 guess + 1**
-    - 代码会有一行亮着的行，代表 **下一步** 将执行的代码
+  - 代码会自动在此处停止
+  - 上面会多出一个执行的小方框
+    - 我们暂时只需要无脑点 步入 (Step into) 就可以一步一步执行了
+    - 上面小方框里的 ▶️ 代表继续，继续执行到下一次遇见断点或结束
+  - 左侧会切换到 运行与调试 的菜单
+    - 最上面写了一些探测到的变量，你可以实时观察他们
+    - 中间是 监视，点击 + 可以输入一个 **表达式** 进行观测，就像实时 `print` 一样，非常方便
+    - **小任务: 尝试观察 guess, 和 guess + 1**
+  - 代码会有一行亮着的行，代表 **下一步** 将执行的代码
 
 <!--v-->
 
 ## 格式化输出：让输出更美，字符串不分家！
 
 - **判断奇偶的代码**里涉及到了一点关于 [格式化输出](https://docs.python.org/zh-cn/3/tutorial/inputoutput.html) 的用法，RTFM
-    - 字符串前的 `f` 是什么意思？
-    - 字符串里的 `{i:2}` 是什么意思？运行的时候被替换成了什么？
-    - 如果去掉 `:2` 输出是什么？你能明白 `:2` 的意思了吗？
-    - 输出的格式是否更美观了？字符串是否可以从分割的变成一个整体了？
-    - 你能理解格式化输出的意义了吗？
+  - 字符串前的 `f` 是什么意思？
+  - 字符串里的 `{i:2}` 是什么意思？运行的时候被替换成了什么？
+  - 如果去掉 `:2` 输出是什么？你能明白 `:2` 的意思了吗？
+  - 输出的格式是否更美观了？字符串是否可以从分割的变成一个整体了？
+  - 你能理解格式化输出的意义了吗？
 - 其实观察就可以发现，就是“让数字占据两位，用空格补齐”，那如果数字有三位呢？修改代码，观察结果。
 - 如果我希望不用空格填充呢？或者用 `0` 来填充？甚至限制小数位数呢？
 - 请 RTFM / STFW，并且将你的发现发送到 Piazza～
-    - （记得格式严谨，适当标注来源，减少 AI 痕迹能更快获得 Likes）
+  - （记得格式严谨，适当标注来源，减少 AI 痕迹能更快获得 Likes）

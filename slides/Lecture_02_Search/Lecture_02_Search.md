@@ -6,18 +6,18 @@ theme: simple
 highlightTheme: github
 css: assets/custom.css
 revealOptions:
-    transition: 'slide'
-    transitionSpeed: fast
-    center: false
-    slideNumber: "c/t"
-    width: 1000
+  transition: "slide"
+  transitionSpeed: fast
+  center: false
+  slideNumber: "c/t"
+  width: 1000
 ---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 700px;">
   <div style="text-align: center; padding: 40px; background-color: white; border: 2px solid rgb(0, 63, 163); border-radius: 20px; box-shadow: 0 0 20px rgba(0,0,0,0.1);">
-    <h1 style="font-size: 48px; font-weight: bold; margin-bottom: 20px; color: #333;">SI100+ 2025 Lecture 02</h1>
+    <h1 style="font-size: 48px; font-weight: bold; margin-bottom: 20px; color: #333;">SI100+ 2026 Lecture 02</h1>
     <p style="font-size: 24px; color: #666;">如何用搜索解决问题</p>
-    <p style="font-size: 16px; color: #999; margin-top: 20px;">SI100+ 2025 Staff | 2025-08-08</p>
+    <p style="font-size: 16px; color: #999; margin-top: 20px;">SI100+ 2026 Staff | 2026-08-08</p>
   </div>
 </div>
 
@@ -26,8 +26,8 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.0 我该搜吗？
-  
+# Part.0 我该搜吗？
+
   </div>
 </div>
 
@@ -55,7 +55,7 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # **去搜啊，为什么不搜？**
+# **去搜啊，为什么不搜？**
 
   </div>
 </div>
@@ -65,7 +65,7 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # **为什么不搜！！！**
+# **为什么不搜！！！**
 
   </div>
 </div>
@@ -89,8 +89,8 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.1 使用什么搜索
-  
+# Part.1 使用什么搜索
+
   </div>
 </div>
 
@@ -141,7 +141,6 @@ revealOptions:
 - 对应领域的社区：光是 [Stack Exchange](https://stackexchange.com/sites) 下就有各种主题的子社区，只用来搜索的话，小红书、知乎也是不错的选择
 - 学校提供的数据库，可以在图书馆网站找到数据库列表
 
-
 <img src="images/stackexchange.png" width="45%" style="display: block; margin: 0 auto;">
 
 <!--v-->
@@ -152,7 +151,7 @@ revealOptions:
   - 不建议使用维基百科自带的搜索功能，直接在 Google 里面加上 Wikipedia 关键词搜索
   - 有些词条没有中文/中文版质量差，推荐看英文版
 - [Merriam-Webster](https://www.merriam-webster.com/): 最权威的英语词典之一
-- RTFM: *the friendly manual*，有时候直接看官方文档是最好的选择
+- RTFM: _the friendly manual_，有时候直接看官方文档是最好的选择
 
 </br>
 
@@ -180,8 +179,8 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.2 把什么丢到搜索框里
-  
+# Part.2 把什么丢到搜索框里
+
   </div>
 </div>
 
@@ -223,7 +222,7 @@ revealOptions:
 
 但是这种搜索方式不完全正确：
 
->告诉黑客们你认为问题是怎样造成的并没什么帮助。（如果你的推断如此有效，还用向别人求助吗？），因此要确信你原原本本告诉了他们问题的症状，而不是你的解释和理论；
+> 告诉黑客们你认为问题是怎样造成的并没什么帮助。（如果你的推断如此有效，还用向别人求助吗？），因此要确信你原原本本告诉了他们问题的症状，而不是你的解释和理论；
 >
 > 让黑客们来推测和诊断。如果你认为陈述自己的猜测很重要，清楚地说明这只是你的猜测，并描述为什么它们不起作用。
 >
@@ -239,7 +238,7 @@ revealOptions:
 
 - 强制包含关键词：半角双引号
 - 强制排除关键词：减号
-- 模糊匹配：星号 如 “Python * tutorial” 可能匹配到 “Python beginner tutorial”，“Python Datascience tutorial”
+- 模糊匹配：星号 如 “Python \* tutorial” 可能匹配到 “Python beginner tutorial”，“Python Datascience tutorial”
 - 限制搜索网站：site: 如 “site:stackoverflow.com Python”
 - 限制搜索文件类型：filetype: 如 “filetype:pdf Python”
 
@@ -248,8 +247,8 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.3 怎么看搜索结果
-  
+# Part.3 怎么看搜索结果
+
   </div>
 </div>
 
@@ -310,12 +309,11 @@ revealOptions:
 
 ## 我没搜到我想要的内容
 
-
 <div class="middle center">
   <div style="width: 100%; margin-top: -100px;">
 
-  # **首先回看前面的内容**
-  
+# **首先回看前面的内容**
+
   </div>
 </div>
 
@@ -327,7 +325,6 @@ revealOptions:
 - 问同学/问老师/问社区
 - 再次强调：[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
 
-
 <img src="images/questions.png" width="60%" style="display: block; margin: 0 auto;">
 
 <!--s-->
@@ -335,8 +332,8 @@ revealOptions:
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.4 搜完了干什么
-  
+# Part.4 搜完了干什么
+
   </div>
 </div>
 
@@ -359,15 +356,15 @@ revealOptions:
   - 按日期与类型分类，仔细整理文件
   - 通过学校云盘保存/分享文件
   - 关键文件保留离线备份
-</div>
+  </div>
 
 <!--s-->
 
 <div class="middle center">
   <div style="width: 100%">
 
-  # Part.5 更多？
-  
+# Part.5 更多？
+
   </div>
 </div>
 
