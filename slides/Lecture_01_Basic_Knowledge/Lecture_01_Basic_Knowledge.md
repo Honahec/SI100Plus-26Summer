@@ -228,7 +228,7 @@ makeThanks: true
 
 <!--v-->
 
-## （例）伪装 Cloudflare 验证诱导运行恶意代码
+## (例)伪装 Cloudflare 验证诱导运行恶意代码
 
 <div class="row">
 
