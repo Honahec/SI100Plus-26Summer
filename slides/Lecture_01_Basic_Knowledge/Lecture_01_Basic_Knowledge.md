@@ -152,6 +152,104 @@ makeThanks: true
 <div class="middle center">
   <div style="width: 100%">
 
+# 安全——一夫当关，万夫莫开
+
+  </div>
+</div>
+
+<!--v-->
+
+## 你的密码/信息是如何被偷走的
+
+- 恶意软件
+- 系统漏洞
+- 钓鱼网站（邮件、QQ 链接常用）
+- 弱密码
+- 社会工程学
+
+<!--v-->
+
+## UAC 是什么（Windows 特辑）
+
+- 你可能见到过 UAC 弹窗，全称 User Account Control 用户账户控制
+
+![UAC 弹窗|400](images/UAC.png)
+
+- 通常你只会觉得，好烦人，不点击就安装不了程序/运行不了外挂/……
+- “提权”：软件向系统申请提升权限（用来访问目录、改变底层设置等）
+- In short，**如果电脑弹出了不明的 UAC 弹窗，请一律拒绝，不运行来源不明的可执行文件！**
+
+<!--v-->
+
+## Windows 更新和安全防护软件
+
+<div class="row">
+
+<div class="col">
+
+- 更新分为许多种：体验更新、驱动程序更新、系统补丁
+- 永恒之蓝
+- **不要完全禁用更新，更不要打断系统更新**
+- 简单的安全防护软件是必要的，但是请不要安装多个！
+- 当心捆绑全家桶
+- 自带的 Windows Defender 其实也挺好了
+
+</div>
+
+<div class="col">
+
+![Windows 安全中心|430](images/Windows_Defender.png)
+
+</div>
+
+</div>
+
+<!--v-->
+
+## 如何辨别钓鱼网站/高仿弹窗
+
+<div class="row">
+
+<div class="col">
+
+- 认识常见的域名
+- 用好的没有广告的搜索引擎
+- 安装安全防护软件 + 弹窗拦截
+
+</div>
+
+<div class="col">
+
+![高仿弹窗辨别示例|420](images/Phishing_Popup.png)
+
+</div>
+
+</div>
+
+<!--v-->
+
+## 如何设置一个强大的密码
+
+- 密码管理器
+- 随机密码（不太推荐）
+- 真正强的密码.jpg
+
+![XKCD Password Strength|540](images/Password_Strength.png)
+
+<!--v-->
+
+## 社会工程学的防范
+
+- 你的信息已经不是自己的了
+- 少输入个人信息
+- 少访问信誉低/不知名的网站，甚至填写信息……
+- 密码多样
+
+<!--s-->
+
+<div class="middle center">
+  <div style="width: 100%">
+
 # 工欲善其事，必先利其器
 
   </div>
