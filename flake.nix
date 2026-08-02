@@ -12,13 +12,17 @@
         "x86_64-linux"
       ];
       perSystem =
-        { pkgs, ... }:
+        { pkgs, system, ... }:
         let
           nodeEnv = with pkgs; [
             git
             nodejs
             pnpm
           ];
+          pnpmDepsHash = {
+            aarch64-darwin = "sha256-CO2L8w3649XTaEvPgcZeNlUTPz7+on/wbx21xYd3zH4=";
+            x86_64-linux = "sha256-JyCOtJ8/yXYPQN9lSii9EvpIvgN26s4Ibs/u5AwKZkc=";
+          }.${system};
         in
         {
           formatter = pkgs.nixpkgs-fmt;
@@ -42,7 +46,7 @@
             pnpmDeps = pkgs.pnpm.fetchDeps {
               inherit (finalAttrs) pname version src;
               fetcherVersion = 1;
-              hash = "sha256-CO2L8w3649XTaEvPgcZeNlUTPz7+on/wbx21xYd3zH4=";
+              hash = pnpmDepsHash;
             };
 
             buildPhase =
