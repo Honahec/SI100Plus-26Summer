@@ -42,7 +42,7 @@
             pnpmDeps = pkgs.pnpm.fetchDeps {
               inherit (finalAttrs) pname version src;
               fetcherVersion = 1;
-              hash = "sha256-JyCOtJ8/yXYPQN9lSii9EvpIvgN26s4Ibs/u5AwKZkc=";
+              hash = "sha256-CO2L8w3649XTaEvPgcZeNlUTPz7+on/wbx21xYd3zH4=";
             };
 
             buildPhase =
@@ -58,11 +58,21 @@
                   echo "Processing $output_dir"
 
                   pnpm exec reveal-md $file --static $output_dir --template ./assets/reveal.html --preprocessor ./assets/preproc.js --scripts assets/menu/menu.js,assets/inject.js
+                  mkdir -p $output_dir/_assets/assets/menu
+                  cp assets/menu/menu.css $output_dir/_assets/assets/menu/menu.css
                   file_dir=$(dirname $file)
                   if [ -d "$file_dir/images" ]; then
                     cp -r $file_dir/images $output_dir
                   fi
                 done
+
+                printf '%s\n' '<ul class="slide-menu-items">' > static/lectures.html
+                find static -mindepth 1 -maxdepth 1 -type d -name 'Lecture_*' -print | sort | while read -r lecture; do
+                  slug=$(basename "$lecture")
+                  title=$(printf '%s' "$slug" | tr '_' ' ')
+                  printf '<li class="slide-menu-item"><a href="../%s/">%s</a></li>\n' "$slug" "$title" >> static/lectures.html
+                done
+                printf '%s\n' '</ul>' >> static/lectures.html
                 runHook postBuild
               '';
 
