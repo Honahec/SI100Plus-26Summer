@@ -33,7 +33,7 @@ revealOptions:
 **第一部分：认识编程语言和 Python**
 
 - 什么是编程语言，什么是 Python？~~Python n. 蟒蛇~~
-- 我们在用的 VS Code 是什么，Python 代码是怎么运行的？
+- Python 代码是怎么运行的？
 
 </br>
 
