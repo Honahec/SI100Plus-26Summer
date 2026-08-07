@@ -120,13 +120,15 @@ makeThanks: true
 
 **Plan B：GitHub 加速镜像**
 
-- Windows: 
+- Windows:
+
 ```powershell
 $env:UV_DOWNLOAD_URL = "https://ghfast.top/https://github.com/astral-sh/uv/releases/download/0.12.2"
 powershell -ExecutionPolicy Bypass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
 - MacOS:
+
 ```bash
 export UV_DOWNLOAD_URL="https://ghfast.top/https://github.com/astral-sh/uv/releases/download/0.12.2"
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -135,18 +137,21 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 <!--v-->
 
 **Plan C**（如果电脑上已经有任意版本的 Python，不推荐）：
+
 ```bash
 # 不推荐
 pip install uv -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
 **Plan D**
+
 - Windows: `winget install --id astral-sh.uv -e`
 - MacOS: `brew install uv`
 - Linux: 自带包管理器(Eg. `apt`, `pacman`, ...)
 
 **Finally**
-- 终端输入 `uv --version` 回车：`0.2.11`
 
+- 终端输入 `uv --version` 回车：`0.12.2`
 
 <!--v-->
 
@@ -284,16 +289,16 @@ mkdir -p ~/.config/uv && echo -e "[[index]]\nurl = \"https://mirrors.cernet.edu.
 ## 用 uv 管理你的环境
 
 1. **管理 Python 版本本身**：uv 能帮你装/切换不同 Python 版本
-    - `uv python install 3.12` 装 3.12 版本的 Python
-    - `uv python list` 列出可用的 Python
+   - `uv python install 3.12` 装 3.12 版本的 Python
+   - `uv python list` 列出可用的 Python
 2. **创建新项目**：`uv init myproject`，自动生成一些初始文件：
-    - `pyproject.toml`：项目配置和依赖声明，`.python-version`：版本声明
+   - `pyproject.toml`：项目配置和依赖声明，`.python-version`：版本声明
 3. `uv venv`（可选）：创建一个崭新的虚拟环境
 4. **`uv sync`** ：安装项目所需的依赖
-    - `uv.lock`：记录精确版本号，保证"别人电脑装出来的环境和你一模一样"
-    - 别人克隆你的项目后，**只用一条命令就能按 lock 文件/声明文件精确复现环境**
+   - `uv.lock`：记录精确版本号，保证"别人电脑装出来的环境和你一模一样"
+   - 别人克隆你的项目后，**只用一条命令就能按 lock 文件/声明文件精确复现环境**
 5. **用 VS Code 打开这个项目/文件夹**：
-    - `code .`（终端唤起 VS Code 并打开当前文件夹），或者手动 Open Folder
+   - `code .`（终端唤起 VS Code 并打开当前文件夹），或者手动 Open Folder
 6. **加依赖**：`uv add pyjokes`，观察 `pyproject.toml` 和 `uv.lock` 的变化。
 7. **运行代码**：`uv run python main.py` 或 `uv run main.py`
 
