@@ -3,6 +3,7 @@
 module.exports = (markdown, options) => {
   return new Promise((resolve, reject) => {
     var isComment = false;
+    var isFence = null; // currently open fenced code block marker ('`' or '~'), if any
     return resolve(
       (options.makeTitle ? `
 <p style="font-size: 16px; color: #999; margin:5px; position: absolute;"><a href="..">Homepage</a> | <a href="?print-pdf">Printable Version</a></p>
@@ -25,6 +26,20 @@ module.exports = (markdown, options) => {
         //   return line.replace(/^(\s*)[-*] (.*)/, "$1- <span> $2 </span>") + ' <!-- .element: class="fragment" -->';
         // })
         .map((line, index) => {
+          // Track fenced code blocks (``` or ~~~) FIRST, so that a "# " line
+          // inside code (e.g. a Python/shell comment) is never treated as a
+          // heading. The opening fence may carry an info string (```bash).
+          const fence = line.match(/^\s*(`{3,}|~{3,})/);
+          if (fence) {
+            if (!isFence) isFence = fence[1][0];
+            else if (fence[1][0] === isFence) isFence = null;
+            return line;
+          }
+          if (isFence) return line;
+          // Track HTML comments (<!-- -->), e.g. the <!--s-->/<!--v--> separators.
+          if (line.includes('<!--')) isComment = true;
+          if (line.includes('-->')) isComment = false;
+          if (isComment) return line;
           if (!options.autoTitlePage) return line;
           if (!line.startsWith('# ')) return line;
           return '<div class="middle center"><div style="width: 100%">\n\n' + line + '\n\n</div></div>';

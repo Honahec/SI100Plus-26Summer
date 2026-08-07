@@ -8,7 +8,7 @@
             "name": "Build Markdown Slides",
             "type": "node-terminal",
             "request": "launch",
-            "command": "reveal-md ${file} -w --template ./assets/reveal.html --preprocessor ./assets/preproc.js --scripts \"./assets/menu/menu.js,./assets/inject.js\"",
+            "command": "npx reveal-md ${file} -w --template ./assets/reveal.html --preprocessor ./assets/preproc.js --scripts \"./assets/menu/menu.js,./assets/inject.js\"",
             "cwd": "${workspaceFolder}",
             "internalConsoleOptions": "openOnSessionStart",
         },
