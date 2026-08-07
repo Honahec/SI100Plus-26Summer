@@ -44,8 +44,9 @@ makeThanks: true
 
 - 官网下载安装包：
   - 打开 VS Code 官网：[`https://code.visualstudio.com`](https://code.visualstudio.com)
-  - 下载对应系统的安装包（Windows 是 `.exe`，MacOS 是 `.zip`，Linux 可用 `.deb` / `.rpm` 等）
-- 或者用自带的包管理器（注意网络环境）
+  - 下载对应系统的安装包（Windows 是 `.exe`，macOS 是 `.dmg`，Linux 可用 `.deb` / `.rpm` 等）
+    - macOS 需要打开 `dmg` 文件之后将 VS Code 拖动到 Application 即可
+- 或者用自带的包管理器（注意网络环境，可以自行搜索）
   - macOS 可用 `brew` 或者自带应用商店
   - Windows 可以用 `winget`
 
@@ -164,6 +165,22 @@ pip install uv -i https://pypi.tuna.tsinghua.edu.cn/simple
 [[index]]
 url = "https://mirrors.cernet.edu.cn/pypi/web/simple"
 default = true
+```
+
+<!--v-->
+
+## 一键换源
+
+Windows:
+
+```powershell
+mkdir -Force $env:APPDATA\uv; "[[index]]`nurl = 'https://mirrors.cernet.edu.cn/pypi/web/simple'`ndefault = true" | Out-File $env:APPDATA\uv\uv.toml -Encoding utf8
+```
+
+Linux / MacOS
+
+```bash
+mkdir -p ~/.config/uv && echo -e "[[index]]\nurl = \"https://mirrors.cernet.edu.cn/pypi/web/simple\"\ndefault = true" > ~/.config/uv/uv.toml
 ```
 
 <!--s-->
@@ -303,14 +320,10 @@ default = true
 
 - 在桌面或者其他地方新建一个文件夹，命名为 `SI100+`
 - 将 Piazza 上的本课的压缩包**完全解压**并移动到 `SI100+` 文件夹中
-- 打开 VS Code，在 VS Code 中点击顶部菜单栏的 File `->` Open Folder，打开刚刚新建的 `SI100+` 文件夹
+- 打开 VS Code，在 VS Code 中点击顶部菜单栏的 File `->` Open Folder，打开刚刚新建的 `SI100+` 文件夹中的课程资料文件夹
 - 打开 VS Code 自带的终端，输入 `uv sync` 并回车，根据文件夹自带的项目文件同步依赖和创建环境
 - 点击左侧边栏的 `.ipynb` 文件，即可打开文件
 - 选择 Kernel 里，找到我们的环境
 - 运行 Notebook！
 
-<div style="position: absolute; bottom: -20vh; text-align: center;">
-
-### 到这里，我们的环境配置初步完成！🎉
-
-</div>
+> 到这里，我们的环境配置初步完成！🎉
