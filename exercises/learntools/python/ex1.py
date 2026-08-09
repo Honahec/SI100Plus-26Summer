@@ -104,7 +104,7 @@ class ArithmeticParensEasy(ThoughtExperiment):
 
 class ArithmeticParensHard(ThoughtExperiment):
     _hint = '你可能需要不止一对括号'
-    _solution = "`(8 - 3) * (2 - (1 + 1))` 是其中的一个解法"
+    _solution = "`(8 + 3 + 2) * (1 - 1)` 是其中的一个解法"
 
 ArithmeticParens = MultipartProblem(ArithmeticParensEasy, ArithmeticParensHard)
 
