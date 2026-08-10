@@ -8,7 +8,7 @@ css: assets/custom.css
 makeTitle:
   lecture: SI100+ 2026 Lecture 6
   title: 控制流和更多类型
-  detail: SI100+ 2026 Staff | 2026-08-15
+  detail: SI100+ 2026 Staff | 2026-08-11
 makeThanks: True
 revealOptions:
   transition: "slide"

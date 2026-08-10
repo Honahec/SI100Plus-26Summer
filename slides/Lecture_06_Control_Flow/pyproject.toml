@@ -1,0 +1,7 @@
+[project]
+name = "si100plus-lecture-06-control-flow"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.3.0",
+]
