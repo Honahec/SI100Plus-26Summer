@@ -449,10 +449,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ipykernel" },
+    { name = "ipython" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "ipykernel", specifier = ">=7.3.0" }]
+requires-dist = [
+    { name = "ipykernel", specifier = ">=7.3.0" },
+    { name = "ipython", specifier = ">=9.16.1" },
+]
 
 [[package]]
 name = "six"
