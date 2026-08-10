@@ -339,6 +339,10 @@ def celsius_to_fahrenheit(celsius):
 
 **演示**：Notebook 示例 3.2.2
 
+<!--v-->
+
+## 定义函数补充
+
 现代 Python 项目常用可选的类型标注表达输入输出类型，并用 docstring 说明用途：
 
 ```py []
@@ -461,8 +465,6 @@ fahrenheit = celsius_to_fahrenheit(celsius)
 - 如果你身边真的有一个李华同学
   - 你的同学李华
 
-</br>
-
 **全局变量（Global Variable）**：定义在最外层的变量，作用范围为全局
 
 英语卷的李华，所有人（作用域）知道他
@@ -578,7 +580,7 @@ print(*args, sep=' ', end='\n', file=None, flush=False)
   - 他当时用的 `vi` 版本不能打开这么大的日志文件
   - 另一个叫 `more` 的工具虽然能打开，但是不能向回翻<small>（现在似乎有了）</small>
 - `less` = `vi` 的操作模式 + `more` 的文件支持 的“查看器” （文件分页器）
-- Windows、IDE 和 Notebook 中的显示方式可能不同，以当前界面为准
+- Windows、IDE 和 Notebook 中的显示方式可能不同，以实际为准
 
 <div style="column-count: 2; padding-left: 20vh; padding-right: 20vh">
 
