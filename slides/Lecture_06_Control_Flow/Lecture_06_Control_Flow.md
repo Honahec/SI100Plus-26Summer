@@ -740,19 +740,18 @@ range(stop), range(start, stop), range(start, stop, step)
 - `range` 能生成从 `start` 到 `stop` **而不包含 `stop`** 的“一列数”
 
 ```py []
->>> type(range(0, 10))       # range's type is `range`
-<class 'range'>              # but we can convert it to list
+>>> type(range(0, 10))    # range's type is `range`
+<class 'range'>           # but we can convert it to list
 >>> list(range(4))
-[0, 1, 2, 3]                 # range(m) range from zero to m-1
+[0, 1, 2, 3]              # range(m) range from zero to m-1
 >>> list(range(3, 9))
-[3, 4, 5, 6, 7, 8]           # range(x, y) range from x to y-1
+[3, 4, 5, 6, 7, 8]        # range(x, y) range from x to y-1
 >>> list(range(3, 9, 2))
 [3, 5, 7]
->>> list(range(7, 2, -1))    # range(x,y,-1) range form x to y+1
-[7, 6, 5, 4, 3]
-# range(x, y, step_size)
+>>> list(range(7, 2, -1)) # range(x,y,-1) range form x to y+1
+[7, 6, 5, 4, 3]           # range(x, y, step_size)
 >>> list(range(4, 1))
-[]                           # if x>y, it will be an empty object
+[]                        # if x>y, it will be an empty object
 ```
 
 <!--v-->
@@ -837,73 +836,3 @@ print(is_prime(input_num))
   - `list` ——无序、什么都装的下的列表
   - `tuple` ——无法改变的“列表”
   - `set` ——集合，永远没有重复！
-
-<!--s-->
-
-# ??. 附加部分
-
-由于各种原因，不确定是否有充足的时间，这一部分不一定会在上课中讲到～
-
-但是我们会在 Notebook 中正常提供，供大家自行阅读～
-
-**如果大家对某个内容呼声很高，可以在 Piazza 上发帖，也可以拉朋友来给你点赞（点 Good Notes / Good Question）！我们会做更多 Notebook / 视频带大家了解！**
-
-<!--s-->
-
-## 字典 (Dict)
-
-- 字典的每个键值 **`key:value`** 用冒号 `:` 分割，每个键值对之间用逗号 `,` 分割，整个字典包括在花括号 `{}` 中 ,格式如下所示：
-- 就像我们查《新华字典》，字就是 `key`，字的释义就是 `value`
-
-```python
-d = { key1 : value1, key2 : value2 }
-```
-
-- 键一般是唯一的、不可变的，如果重复最后的一个键值对会替换前面的，值不需要唯一。
-
-```python
-my_info = { # 这里用了一个比较美观的换行写法，适用于长文本排版
-    "course_name": "SI 100+",
-    "semester": "2023 Summer", # 这个逗号可选
-}
-```
-
-形如 `"name": "ZAMBAR"` 的我们称之为**键值对** (key-value pairs)
-
-<!--v-->
-
-## 字典 (Dict) (cont'd)
-
-更多请看即将 Release 的 Python 进阶 课程！
-
-<!--v-->
-
-## 简单的调试入门：追踪你的代码运行
-
-- 注意到资料的**猜数字**代码左侧有一个小红点了吗？这个点的名字叫断点 (breakpoint)
-- 鼠标悬浮在当前行的最左侧，就可以启用/禁用该断点
-- 使用**调试**模式启动时（运行按钮 ▶️ 的下拉菜单里，有一个 `调试该代码块`）
-  - 代码会自动在此处停止
-  - 上面会多出一个执行的小方框
-    - 我们暂时只需要无脑点 步入 (Step into) 就可以一步一步执行了
-    - 上面小方框里的 ▶️ 代表继续，继续执行到下一次遇见断点或结束
-  - 左侧会切换到 运行与调试 的菜单
-    - 最上面写了一些探测到的变量，你可以实时观察他们
-    - 中间是 监视，点击 + 可以输入一个 **表达式** 进行观测，就像实时 `print` 一样，非常方便
-    - **小任务: 尝试观察 guess, 和 guess + 1**
-  - 代码会有一行亮着的行，代表 **下一步** 将执行的代码
-
-<!--v-->
-
-## 格式化输出：让输出更美，字符串不分家！
-
-- **判断奇偶的代码**里涉及到了一点关于 [格式化输出](https://docs.python.org/zh-cn/3/tutorial/inputoutput.html) 的用法，RTFM
-  - 字符串前的 `f` 是什么意思？
-  - 字符串里的 `{i:2}` 是什么意思？运行的时候被替换成了什么？
-  - 如果去掉 `:2` 输出是什么？你能明白 `:2` 的意思了吗？
-  - 输出的格式是否更美观了？字符串是否可以从分割的变成一个整体了？
-  - 你能理解格式化输出的意义了吗？
-- 其实观察就可以发现，就是“让数字占据两位，用空格补齐”，那如果数字有三位呢？修改代码，观察结果。
-- 如果我希望不用空格填充呢？或者用 `0` 来填充？甚至限制小数位数呢？
-- 请 RTFM / STFW，并且将你的发现发送到 Piazza～
-  - （记得格式严谨，适当标注来源，减少 AI 痕迹能更快获得 Likes）
