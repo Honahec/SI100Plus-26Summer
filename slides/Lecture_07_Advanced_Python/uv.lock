@@ -2,6 +2,12 @@ version = 1
 revision = 3
 requires-python = ">=3.12"
 
+[manifest]
+members = [
+    "si100plus-lecture-07-advanced-python",
+    "weather-app",
+]
+
 [[package]]
 name = "appnope"
 version = "0.1.4"
@@ -524,3 +530,8 @@ sdist = { url = "https://mirror.nju.edu.cn/pypi/web/packages/34/74/c6428f8757742
 wheels = [
     { url = "https://mirror.nju.edu.cn/pypi/web/packages/96/42/3e5985a0a7e57de470b320c6d6a1a67c844f6737a587f3d44dd13d1819e7/wcwidth-0.8.2-py3-none-any.whl", hash = "sha256:d63947694a0539a1d51e01eda7caf800c291020e6cdd7e28ad7b14dd33ad4f85" },
 ]
+
+[[package]]
+name = "weather-app"
+version = "0.1.0"
+source = { editable = "weather_app" }

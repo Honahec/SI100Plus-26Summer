@@ -48,10 +48,10 @@ Notebook 适合探索，但到实际的项目中，我们就需要去规划代�
 ```text
 weather_app/
 ├── pyproject.toml
-├── main.py
-└── weather/
-    ├── __init__.py
-    └── convert.py
+└── src/
+    └── weather_app/
+        ├── __init__.py
+        └── convert.py
 ```
 
 - `.py` 文件可以作为**模块 (module)** 被其他代码复用
