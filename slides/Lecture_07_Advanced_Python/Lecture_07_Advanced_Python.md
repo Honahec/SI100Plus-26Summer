@@ -662,6 +662,113 @@ class Clock:
 
 <!--s-->
 
+<div class="middle center">
+  <div style="width: 100%">
+
+# Optional 一切皆对象
+
+  </div>
+</div>
+
+<!--v-->
+
+## Python 中的一切都是对象
+
+Python 是一门面向对象的程序设计语言，它的设计理念之一便是“一切皆对象”。
+
+我们之前学过的所有类型（包括一开始的基本数据类型和后面引入的列表、元组等类型），全都是 Python 中的类：
+
+```python
+print(str, int, float, bool, list, dict)
+# <class 'str'> <class 'int'> <class 'float'> <class 'bool'> <class 'list'> <class 'dict'>
+```
+
+**演示**：Notebook 示例 7.6.1, 7.6.2
+
+<!--v-->
+
+## 我们能得到什么？
+
+- 如果定义一个类时没有指定继承哪个类，则默认继承 `object` 类
+- `object` 类的父类为空，说明 `object` 类位于继承关系链的顶端
+- 对象 `a` 由类 `A` 实例化而来，`a` 的类型为 `A`，这个比较容易理解
+- 类 `A` 是由 `type` 这个类实例化而来，说明类 A 是一个类的同时也是一个对象
+- `object` 这个顶端类也是由 `type` 这个类实例化而来，说明 `object` 作为一个类的同时也是一个对象
+- `type` 自身的类型为 `type`
+- **类 `type` 作为实例化类 `A` 和类 `object` 的类，其父类为 `object`**
+
+<!--v-->
+
+## 最普通的实例对象链
+
+`type --实例化--> object --继承--> class A (类) --实例化--> a(具体对象)`
+
+这部分都是比较好理解的，但关键的问题是——`object` 类作为 `type` 类的父类，怎么会是由 `type` 类实例化出来的？还有 `type` 类居然是由 `type` 自己实例化出来的？
+
+你是否有很多问号
+
+<!--v-->
+
+## 我们可能真的需要回归源码了
+
+在源码中，`type` 类的定义如下：
+
+```c
+#define PyVarObject_HEAD_INIT(type, size)
+    1, type, size,
+
+PyTypeObject PyType_Type = {
+    PyVarObject_HEAD_INIT(&PyType_Type, 0)
+    "type",
+    ...
+}
+```
+
+`object` 类定义如下：
+
+```c
+PyTypeObject PyBaseObject_Type = {
+    PyVarObject_HEAD_INIT(&PyType_Type, 0)
+    "object",
+    ...
+}
+```
+
+<!--v-->
+
+## 我们可能真的需要回归源码了 (cont'd)
+
+- `object` 类将类型设置成了 `type` 类，`type` 类将类型设置成了自己！
+
+在 `type` 类的初始化过程中，执行了：
+
+```c
+type->tp_base = &PyBaseObject_Type;
+```
+
+等价于 Python 代码：
+
+```python
+type.__base__ = (object, )
+```
+
+显式地将 `object` 类指定为 `type` 类的父类
+
+<!--v-->
+
+## 终于拨开云雾了 吗？
+
+- `object` 类是所有类的父类，包括 `type` 类，`object` 类没有父类
+- `type` 类是所有类的类型，即所有类都可由 `type` 实例化而来，包括 `type` 类自己
+
+总而言之，Python 中的一切都是“对象”
+
+但，为什么呢？
+
+这是一个非常非常选择性的话题，大家感兴趣就可以去探究一下！
+
+<!--s-->
+
 ## Takeaway Message
 
 - 模块和包：拆分职责，通过 `import` 复用代码
@@ -671,3 +778,4 @@ class Clock:
 - 数据抽象：当我们有太多数据的时候，应该用合适的方式将他们组织起来
 - 类与实例：类是一种模板，一个类可以创建许多实例
 - 成员与方法：类的成员是用来描述实例的属性，方法是用来描述实例的行为，用 `.` 来访问
+- Python 一切皆对象
