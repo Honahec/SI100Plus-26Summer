@@ -63,14 +63,14 @@ weather_app/
 ## 导入模块，而不是复制代码
 
 ```python
-# weather/convert.py
+# src/weather_app/convert.py
 def celsius_to_fahrenheit(celsius: float) -> float:
     return celsius * 9 / 5 + 32
 ```
 
 ```python
-# main.py
-from weather.convert import celsius_to_fahrenheit
+# src/weather_app/__init__.py
+from .convert import celsius_to_fahrenheit
 
 print(celsius_to_fahrenheit(26.5))
 ```
@@ -714,9 +714,6 @@ print(str, int, float, bool, list, dict)
 在源码中，`type` 类的定义如下：
 
 ```c
-#define PyVarObject_HEAD_INIT(type, size)
-    1, type, size,
-
 PyTypeObject PyType_Type = {
     PyVarObject_HEAD_INIT(&PyType_Type, 0)
     "type",
